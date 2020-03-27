@@ -68,15 +68,13 @@ public class SignIn extends AppCompatActivity {
     }
 
     //@Override
-    //public void onStart() {
-    //    super.onStart();
-    //    FirebaseUser currentUser = mAuth.getCurrentUser();
-    //    if(mAuth.currentUser == null){
-    //        val intent = Intent(this, LoginActivity::class.java)
-    //       startActivity(intent)
-    //        finish()
-    //    }else{
-    //        Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
-    //    }
-    //    }
+    public void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser == null){
+           startActivity(new Intent(SignIn.this, HomeActivity.class));
+            finish();
+        }else
+            Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show();
+    }
 }

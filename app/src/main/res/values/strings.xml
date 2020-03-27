@@ -12,4 +12,7 @@
     <string name="contact_us">Contact Us</string>
     <string name="door_open">doorOpen</string>
     <string name="door_close">doorClose</string>
+    <string name="tell_us_more_about_yourself">Tell us more about yourself</string>
+    <string name="save">Save</string>
+    <string name="your_image">Your image</string>
 </resources>

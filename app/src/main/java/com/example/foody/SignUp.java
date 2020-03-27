@@ -38,8 +38,10 @@ public class SignUp extends AppCompatActivity {
             public void onClick(View v) {
                 String user_email = emailId.getText().toString();
                 String user_password = pwd.getText().toString();
-                if(user_password.length() < 6)
-                    Toast.makeText(SignUp.this, "Password must be 6 characters long", Toast.LENGTH_SHORT).show();
+                if(user_password.length() < 6) {
+                    pwd.setError("Min 6 characters");
+                    pwd.requestFocus();
+                }
                 if(user_email.isEmpty()){
                     emailId.setError("Please enter Email");
                     emailId.requestFocus();
@@ -54,7 +56,7 @@ public class SignUp extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
                                 Toast.makeText(SignUp.this, "Successfully Registered", Toast.LENGTH_LONG).show();
-                                startActivity(new Intent(SignUp.this, HomeActivity.class));
+                                startActivity(new Intent(SignUp.this, UserInfo.class));
                             }else
                                 Toast.makeText(SignUp.this, "Registration Failed", Toast.LENGTH_LONG).show();
                         }
