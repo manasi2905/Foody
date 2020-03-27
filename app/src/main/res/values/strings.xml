@@ -7,4 +7,9 @@
     <string name="login">Login</string>
     <string name="email">Email</string>
     <string name="sign_up">Sign Up</string>
+    <string name="log_out">Log Out</string>
+    <string name="about_us">About Us</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="door_open">doorOpen</string>
+    <string name="door_close">doorClose</string>
 </resources>

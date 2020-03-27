@@ -3,6 +3,7 @@ package com.example.foody;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -55,6 +56,7 @@ public class SignIn extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(SignIn.this, "Sucessfully Logged In", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(SignIn.this, HomeActivity.class));
                         }
                         else
                             Toast.makeText(SignIn.this, "Login Failed", Toast.LENGTH_SHORT).show();
